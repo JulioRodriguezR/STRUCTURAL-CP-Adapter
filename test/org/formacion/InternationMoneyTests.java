@@ -10,8 +10,9 @@ public class InternationMoneyTests {
 	
 	@Before
 	public void init() {
-		// cambia este null por una referencia al adapter que has creado
-		servicio = null;
+		BancoNostrumIml bancoNostrum = new BancoNostrumIml();
+		InternalMoneyAdapter adapter = new InternalMoneyAdapter(bancoNostrum);
+		servicio = adapter;
 	}
 	
 	@Test
